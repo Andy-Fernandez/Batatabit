@@ -143,11 +143,11 @@ main{
     color: var(--bitcoin-orange);
 }
 .main-comissions-table .comissions-table--title{
-    color: var(--secondary-blue);
     margin-bottom: 15px;
     font-size: 1.8rem;
     font-weight: bold;
     line-height: 2.3rem;
+    color: var(--secondary-blue);
 }
 .main-comissions-table .comissions-table--container{
     width: 90%;
@@ -207,7 +207,6 @@ main{
     width: 173px;
     height: 31px;
     margin: 0 auto;
-    
     background-color: var(--soft-blue);
 }
 .main-comissions-table .comissions-table--date p{
