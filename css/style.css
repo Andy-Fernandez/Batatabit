@@ -97,12 +97,6 @@ main{
     padding-bottom: 30px;
     text-align: center;
 }
-.main-exchange-container--title{
-    width: 90%;
-    min-width: 288px;
-    margin: 900px;
-    margin: 0 auto;
-}
 .main-exchange-container .backgroundImg{
     width: 200px;
     height: 200px;
@@ -112,6 +106,12 @@ main{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+}
+.main-exchange-container--title{
+    width: 90%;
+    min-width: 288px;
+    max-width: 900px;
+    margin: 0 auto;
 }
 .main-exchange-container h2{
     margin-bottom: 30px;
@@ -127,7 +127,16 @@ main{
     line-height: 1.6rem;
     color: #757575;
 }
-.main-currency-table{
+.main-tables-container{
+    min-width: 320px;
+    max-width: 1000px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-self: center;
+    margin: 0 auto;
+}
+.main-comissions-table, .main-currency-table{
     width: 70%;
     min-width: 235px;
     max-width: 500px;
@@ -142,7 +151,15 @@ main{
     line-height: 2.3rem;
     color: var(--bitcoin-orange);
 }
-.main-currency-table .currency-table--container{
+.main-comissions-table .comissions-table--title{
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 2.3rem;
+    color: var(--secondary-blue);
+}
+.comissions-table--container,
+.currency-table--container{
     width: 90%;
     min-width: 230px;
     max-width: 300px;
@@ -150,11 +167,13 @@ main{
     margin: 0 auto;
     margin-bottom: 16px;
 }
+.comissions-table--container table,
 .currency-table--container table{
     width: 100%;
     height: 100%;
 }
-.currency-table--container table tr{
+.comissions-table--container table td,
+.currency-table--container table td{
     width: 50%;
     font-size: 1.6rem;
     font-weight: 500;
@@ -162,24 +181,32 @@ main{
     color: var(--grey);
     background-color: var(--just-white);
 }
-
+.comissions-table--container .table__top-left,
 .currency-table--container .table__top-left{
     border-radius: 15px 0 0 0;
 }
-.currency-table--container .table__top-right{
+.comissions-table--container .table__top-right, .currency-table--container .table__top-right{
     border-radius: 0 15px 0 0;
 }
-.currency-table--container .table__bottom-left{
+.comissions-table--container .table__bottom-left, .currency-table--container .table__bottom-left{
     border-radius: 0 0 0 15px;
 }
-.currency-table--container .table__bottom-right{
+.comissions-table--container .table__bottom-right, .currency-table--container .table__bottom-right{
     border-radius: 0 0 15px 0;
 }
+.comissions-table--container .table__right,
 .currency-table--container .table__right{
     font-size: 1.4rem;
     font-weight: normal;
     line-height: 1.7rem;
     color: #757575
+}
+.currency-table--container .up{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    background: url(../assets/icons/trending-up.svg) center/cover no-repeat;
 }
 .currency-table--container .down{
     display: inline-block;
@@ -188,12 +215,23 @@ main{
     margin-left: 10px;
     background: url(../assets/icons/trending-down.svg) center/cover no-repeat;
 }
-.currency-table--container .up{
+.main-comissions-table .comissions-table--date{
     display: inline-block;
-    width: 15px;
-    height: 15px;
-    margin-left: 10px;
-    background: url(../assets/icons/trending-up.svg) center/cover no-repeat;
+    width: 173px;
+    height: 31px;
+    margin: 0 auto;
+    background-color: var(--soft-blue);
+}
+.main-comissions-table .comissions-table--date p{
+    padding: 8px;
+    font-size: 1.2rem;
+    line-height: 15px;
+    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+    color: var(--warm-black);
+}
+.main-comissions-table .comissions-table--date b{
+    font-weight: 700;
 }
 .main-currency-table .currency-table--date{
     display: inline-block;
@@ -203,7 +241,7 @@ main{
     border-radius: 8px;
 }
 .main-currency-table .currency-table--date p{
-    margin: 8px;
+    padding: 8px;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 12px;
