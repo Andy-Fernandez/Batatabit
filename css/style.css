@@ -129,11 +129,12 @@ main{
 }
 .main-tables-container{
     min-width: 320px;
-    max-width: 900px;
+    max-width: 1000px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-self: center;
+    margin: 0 auto;
 }
 .main-comissions-table, .main-currency-table{
     width: 70%;
